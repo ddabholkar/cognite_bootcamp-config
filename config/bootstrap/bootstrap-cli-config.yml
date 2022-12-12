@@ -12,7 +12,24 @@ bootstrap:
 
   idp-cdf-mappings:
     # Support multiple CDF Projects, like dev/test/prod in one config.
-    - cdf-project: cdf-bootcamp-<n>-test
+    - cdf-project: cdf-bootcamp-01-test
+      mappings:
+        - cdf-group: cdf:root
+          idp-source-id: a82c121e-11b0-457e-b204-4cbc0b77ff9e
+          idp-source-name: bootcamp-01-test-admin
+        - cdf-group: cdf:all:owner
+          idp-source-id: d21a982d-a651-4e4c-a451-96fc66bb98d3
+          idp-source-name: bootcamp-01-test-all-owner
+        - cdf-group: cdf:all:read
+          idp-source-id: c56cb099-b284-4a7a-91ec-352e04cccad2
+          idp-source-name: bootcamp-01-test-all-read
+        - cdf-group: cdf:uc:001:oee:read
+          idp-source-id: 9d4c07b7-1747-4e2f-a40f-bda846342e8c
+          idp-source-name: bootcamp-01-test-uc-001-oee-read
+        - cdf-group: cdf:uc:001:oee:owner
+          idp-source-id: ebb231d8-1a7e-41e4-89c3-8b8b8154594a
+          idp-source-name: bootcamp-01-test-uc-001-oee-owner
+    - cdf-project: cdf-bootcamp-01-prod
       mappings:
         - cdf-group: cdf:root
           idp-source-id: 9db13b39-aa31-4ffd-964f-108fe4aa9aa3
@@ -23,7 +40,13 @@ bootstrap:
         - cdf-group: cdf:all:read
           idp-source-id: c56cb099-b284-4a7a-91ec-352e04cccad2
           idp-source-name: bootcamp-01-prod-all-read
-
+        - cdf-group: cdf:uc:001:oee:read
+          idp-source-id: 089abc8d-0169-420d-8bd0-60b14ca956ed
+          idp-source-name: bootcamp-01-prod-uc-001-oee-read
+        - cdf-group: cdf:uc:001:oee:owner
+          idp-source-id: 11c08783-e351-4887-8f2f-a9fd3683ebb4
+          idp-source-name: bootcamp-01-prod-uc-001-oee-owner
+        
   namespaces:
     # Typical config will have separate namespace by data source ("src") and use cases ("uc")
     - ns-name: src
