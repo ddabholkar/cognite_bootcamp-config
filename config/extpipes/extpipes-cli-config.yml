@@ -1,6 +1,6 @@
 ---
 # follows the same parameter structure as the DB extractor configuration
-cognite: # kwargs to pass to the CogniteClient, Environment variable format: ${ENVIRONMENT_VARIABLE}
+cognite:
   # host: https://${EXTPIPES_CDF_CLUSTER}.cognitedata.com/
     host: ${EXTPIPES_CDF_HOST}
     project: ${EXTPIPES_CDF_PROJECT}
@@ -49,7 +49,7 @@ rawdbs:
                         email: ddabholkar@slb.com
                         role: Prod Ops Engineer
                         send-notification: false
-                      
+
     - rawdb-name: src:002:opcua:db
       dataset-external-id: src:002:opcua:ds
       short-name: opcua
