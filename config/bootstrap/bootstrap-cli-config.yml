@@ -1,87 +1,87 @@
+---
 bootstrap:
 
-  features:
-    with-special-groups: false
-    with-raw-capability: true
-    aggregated-level-name: all
-    group-prefix: cdf
-    dataset-suffix: ds
-    rawdb-suffix: db
-    rawdb-additional-variants:
-      - state
+    features:
+        with-special-groups: false
+        with-raw-capability: true
+        aggregated-level-name: all
+        group-prefix: cdf
+        dataset-suffix: ds
+        rawdb-suffix: db
+        rawdb-additional-variants:
+            - state
 
-  idp-cdf-mappings:
+    idp-cdf-mappings:
     # Support multiple CDF Projects, like dev/test/prod in one config.
-    - cdf-project: cdf-bootcamp-01-test
-      mappings:
-        - cdf-group: cdf:root
-          idp-source-id: a82c121e-11b0-457e-b204-4cbc0b77ff9e
-          idp-source-name: bootcamp-01-test-admin
-        - cdf-group: cdf:all:owner
-          idp-source-id: d21a982d-a651-4e4c-a451-96fc66bb98d3
-          idp-source-name: bootcamp-01-test-all-owner
-        - cdf-group: cdf:all:read
-          idp-source-id: c56cb099-b284-4a7a-91ec-352e04cccad2
-          idp-source-name: bootcamp-01-test-all-read
-        - cdf-group: cdf:uc:001:oee:read
-          idp-source-id: 9d4c07b7-1747-4e2f-a40f-bda846342e8c
-          idp-source-name: bootcamp-01-test-uc-001-oee-read
-        - cdf-group: cdf:uc:001:oee:owner
-          idp-source-id: ebb231d8-1a7e-41e4-89c3-8b8b8154594a
-          idp-source-name: bootcamp-01-test-uc-001-oee-owner
-    - cdf-project: cdf-bootcamp-01-prod
-      mappings:
-        - cdf-group: cdf:root
-          idp-source-id: 9db13b39-aa31-4ffd-964f-108fe4aa9aa3
-          idp-source-name: bootcamp-01-prod-admin
-        - cdf-group: cdf:all:owner
-          idp-source-id: f871172b-f7f1-4d6c-a91b-0a3bf4bf32c0
-          idp-source-name: bootcamp-01-prod-all-owner
-        - cdf-group: cdf:all:read
-          idp-source-id: c56cb099-b284-4a7a-91ec-352e04cccad2
-          idp-source-name: bootcamp-01-prod-all-read
-        - cdf-group: cdf:uc:001:oee:read
-          idp-source-id: 089abc8d-0169-420d-8bd0-60b14ca956ed
-          idp-source-name: bootcamp-01-prod-uc-001-oee-read
-        - cdf-group: cdf:uc:001:oee:owner
-          idp-source-id: 11c08783-e351-4887-8f2f-a9fd3683ebb4
-          idp-source-name: bootcamp-01-prod-uc-001-oee-owner
-        
-  namespaces:
-    # Typical config will have separate namespace by data source ("src") and use cases ("uc")
-    - ns-name: src
-      description: Sources used for data extraction
-      # Description names will normally follow src:001:srcname or uc:001:usecasename naming convention
-      ns-nodes:
-        - node-name: src:001:sap
-          description: Source 01 data from SAP
-        - node-name: src:002:opcua
-          description: Source 02 data from opcua
-    # Typical config will have separate namespace by data source ("src") and use cases ("uc")
-    - ns-name: uc
-      description: Use cases representing the data/products
+        - cdf-project: cdf-bootcamp-01-test
+          mappings:
+              - cdf-group: cdf:root
+                idp-source-id: a82c121e-11b0-457e-b204-4cbc0b77ff9e
+                idp-source-name: bootcamp-01-test-admin
+              - cdf-group: cdf:all:owner
+                idp-source-id: d21a982d-a651-4e4c-a451-96fc66bb98d3
+                idp-source-name: bootcamp-01-test-all-owner
+              - cdf-group: cdf:all:read
+                idp-source-id: c56cb099-b284-4a7a-91ec-352e04cccad2
+                idp-source-name: bootcamp-01-test-all-read
+              - cdf-group: cdf:uc:001:oee:read
+                idp-source-id: 9d4c07b7-1747-4e2f-a40f-bda846342e8c
+                idp-source-name: bootcamp-01-test-uc-001-oee-read
+              - cdf-group: cdf:uc:001:oee:owner
+                idp-source-id: ebb231d8-1a7e-41e4-89c3-8b8b8154594a
+                idp-source-name: bootcamp-01-test-uc-001-oee-owner
+        - cdf-project: cdf-bootcamp-01-prod
+          mappings:
+              - cdf-group: cdf:root
+                idp-source-id: 9db13b39-aa31-4ffd-964f-108fe4aa9aa3
+                idp-source-name: bootcamp-01-prod-admin
+              - cdf-group: cdf:all:owner
+                idp-source-id: f871172b-f7f1-4d6c-a91b-0a3bf4bf32c0
+                idp-source-name: bootcamp-01-prod-all-owner
+              - cdf-group: cdf:all:read
+                idp-source-id: c56cb099-b284-4a7a-91ec-352e04cccad2
+                idp-source-name: bootcamp-01-prod-all-read
+              - cdf-group: cdf:uc:001:oee:read
+                idp-source-id: 089abc8d-0169-420d-8bd0-60b14ca956ed
+                idp-source-name: bootcamp-01-prod-uc-001-oee-read
+              - cdf-group: cdf:uc:001:oee:owner
+                idp-source-id: 11c08783-e351-4887-8f2f-a9fd3683ebb4
+                idp-source-name: bootcamp-01-prod-uc-001-oee-owner
 
+    namespaces:
+    # Typical config will have separate namespace by data source ("src") and use cases ("uc")
+        - ns-name: src
+          description: Sources used for data extraction
       # Description names will normally follow src:001:srcname or uc:001:usecasename naming convention
-      ns-nodes:
-        - node-name: uc:001:oee
-          description: Use case 001 Over all Equipment effectiveness
-          shared-access:
-            read:
+          ns-nodes:
               - node-name: src:001:sap
+                description: Source 01 data from SAP
               - node-name: src:002:opcua
-cognite:
-  host: ${BOOTSTRAP_CDF_HOST}
-  project: ${BOOTSTRAP_CDF_PROJECT}
-  idp-authentication:
-    client-id: ${BOOTSTRAP_IDP_CLIENT_ID}
-    secret: ${BOOTSTRAP_IDP_CLIENT_SECRET}
-    scopes:
-      - ${BOOTSTRAP_IDP_SCOPES}
-    token_url: ${BOOTSTRAP_IDP_TOKEN_URL}
-logger:
-  file:
-    path: ./logs/bootstrap-cli-logs.log
-    level: INFO
-  console:
-    level: INFO
+                description: Source 02 data from opcua
+    # Typical config will have separate namespace by data source ("src") and use cases ("uc")
+        - ns-name: uc
+          description: Use cases representing the data/products
 
+      # Description names will normally follow src:001:srcname or uc:001:usecasename naming convention
+          ns-nodes:
+              - node-name: uc:001:oee
+                description: Use case 001 Over all Equipment effectiveness
+                shared-access:
+                    read:
+                        - node-name: src:001:sap
+                        - node-name: src:002:opcua
+cognite:
+    host: ${BOOTSTRAP_CDF_HOST}
+    project: ${BOOTSTRAP_CDF_PROJECT}
+    idp-authentication:
+        client-id: ${BOOTSTRAP_IDP_CLIENT_ID}
+        secret: ${BOOTSTRAP_IDP_CLIENT_SECRET}
+        scopes:
+            - ${BOOTSTRAP_IDP_SCOPES}
+        token_url: ${BOOTSTRAP_IDP_TOKEN_URL}
+logger:
+    file:
+        path: ./logs/bootstrap-cli-logs.log
+        level: INFO
+    console:
+        level: INFO
